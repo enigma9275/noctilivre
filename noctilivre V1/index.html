@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Noctilivre</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Landing Page -->
+<div id="landing" class="page">
+  <h1>Noctilivre</h1>
+  <p>Entrez dans le monde des livres.</p>
+  <button class="btn main-btn" onclick="showForm()">Laisse-nous ton avis</button>
+  <button class="btn secondary-btn" onclick="showLibrary()">Voir le monde des livres</button>
+</div>
+
+<!-- Formulaire -->
+<div id="form-page" class="page hidden">
+  <h2>Ton avis sur un livre</h2>
+  <form id="book-form">
+    <label>Nom du livre:<input type="text" id="bookName" required></label>
+    <label>Auteur:<input type="text" id="author" required></label>
+    <label>Genre:<input type="text" id="genre"></label>
+    
+    <label>Notation (1-5): 
+      <select id="rating">
+        <option value="1">1</option><option value="2">2</option>
+        <option value="3">3</option><option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </label>
+    
+    <label>Recommander ?
+      <select id="recommend">
+        <option value="Oui">Oui</option>
+        <option value="Non">Non</option>
+      </select>
+    </label>
+    
+    <label>Recommandé si :<input type="text" id="recommendIf"></label>
+    <label>Avis / Critique:<textarea id="review"></textarea></label>
+    <label>Points forts:<textarea id="pros"></textarea></label>
+    <label>Longueur:
+      <select id="length">
+        <option value="Court">Court</option>
+        <option value="Moyen">Moyen</option>
+        <option value="Long">Long</option>
+      </select>
+    </label>
+    <label>Scènes choquantes / smut:
+      <select id="explicit">
+        <option value="Oui">Oui</option>
+        <option value="Non">Non</option>
+      </select>
+    </label>
+    <label>Nombre de pages:<input type="number" id="pages"></label>
+    <label>Format:
+      <select id="format">
+        <option value="Poche">Poche</option>
+        <option value="Broché">Broché</option>
+        <option value="Collector">Collector</option>
+      </select>
+    </label>
+    <button type="submit" class="btn main-btn">Voir le monde des livres</button>
+  </form>
+</div>
+
+<!-- Monde des livres -->
+<div id="library-page" class="page hidden">
+  <h2>Le monde des livres</h2>
+  <div id="library"></div>
+  <button class="btn secondary-btn" onclick="showForm()">Ajouter un nouvel avis</button>
+  <button class="btn secondary-btn" onclick="showLanding()">Retour à l'accueil</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
